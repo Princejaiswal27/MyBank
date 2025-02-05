@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h2>Banking System</h2>
+
+    <!-- Customer Creation Form -->
+    <h3>Create Customer</h3>
+    <form id="customerForm">
+		<input type="text" id="customerId" placeholder="Customer Id" required readonly>
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <button type="submit">Create Customer</button>
+    </form>
+    
+    <!-- Account Creation Form -->
+    <h3>Create Account</h3>
+    <form id="accountForm">
+        <input type="number" id="accountNumber" placeholder="Account Number" required readonly>
+		<input type="number" id="customer_Id" placeholder="Customer Id" required>
+        <input type="number" id="initialBalance" placeholder="Initial Balance" required>
+        <button type="submit">Open Account</button>
+    </form>
+
+    <!-- Transaction Buttons -->
+    <h3>Account Transactions</h3>
+    <button onclick="checkBalance()">Check Balance</button>
+    <button onclick="performTransaction('credit')">Credit</button>
+    <button onclick="performTransaction('debit')">Debit</button>
+
+    <p id="message"></p>
+</body>
+</html>
